@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
-        
+        <Button x:Name="btntest" Width="100" Height="50">Sucuk</Button>
     </Canvas>
 </Window>
