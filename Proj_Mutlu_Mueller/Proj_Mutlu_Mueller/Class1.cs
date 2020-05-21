@@ -15,8 +15,6 @@ namespace Proj_Mutlu_Mueller
         int[] DeutschNote = new int[5];
         int Deutschparkplatz = 0;
 
-        int testtest = 10;
-        bool ehrenmann = true;
 
     }
 }
