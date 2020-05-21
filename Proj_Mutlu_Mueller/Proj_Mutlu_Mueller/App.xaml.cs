@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace FSST_projekt
+namespace Proj_Mutlu_Mueller
 {
     /// <summary>
     /// Interaktionslogik für "App.xaml"

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FSST_projekt
+namespace Proj_Mutlu_Mueller
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
