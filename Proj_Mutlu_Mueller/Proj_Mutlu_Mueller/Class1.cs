@@ -16,5 +16,7 @@ namespace Proj_Mutlu_Mueller
         int Deutschparkplatz = 0;
 
         int testtest = 10;
+        bool ehrenmann = true;
+
     }
 }
