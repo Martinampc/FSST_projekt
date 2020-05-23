@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proj_Mutlu_Mueller
 {
-    class Noten
+    public abstract class Noten
     {
         bool _m5er1; //negative Mathenote in jahrgängen 1 bis 5
         bool _m5er2;
@@ -226,10 +226,11 @@ namespace Proj_Mutlu_Mueller
             }
         }
     }
-}
-    class Parkplatz
+
+    public class Parkplatz : Noten
     {
         int _matheparkplatz = 0;     //gesamtanzahl der geparkten 5er in jedem Fach
         int _englischparkplatz = 0;
         int _deutschparkplatz = 0;
     }
+}
