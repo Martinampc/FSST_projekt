@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FSST_projekt.Properties
+namespace Proj_Mutlu_Mueller.Properties
 {
 
 
