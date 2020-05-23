@@ -26,7 +26,7 @@ namespace Proj_Mutlu_Mueller
         bool _d5er4;
         bool _d5er5;
 
-        public Noten(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, //Konstruktor
+        public Noten(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, //Basis Konstruktor
                     bool e5er1 = false, bool e5er2 = false, bool e5er3 = false, bool e5er4 = false, bool e5er5 = false,
                     bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false)
         {
@@ -229,8 +229,16 @@ namespace Proj_Mutlu_Mueller
 
     public class Parkplatz : Noten
     {
-        int _matheparkplatz = 0;     //gesamtanzahl der geparkten 5er in jedem Fach
-        int _englischparkplatz = 0;
-        int _deutschparkplatz = 0;
+        bool matheparkplatz;     //gesamtanzahl der geparkten 5er in jedem Fach
+        bool englischparkplatz;
+        bool deutschparkplatz;
+
+        public Parkplatz(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, //Konstruktor
+                   bool e5er1 = false, bool e5er2 = false, bool e5er3 = false, bool e5er4 = false, bool e5er5 = false,
+                   bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false)
+            : base(m5er1, m5er2, m5er3, m5er4, m5er5, e5er1, e5er2, e5er3, e5er4, e5er5, d5er1, d5er2, d5er3, d5er4, d5er5) //Basiskonstruktor einbeziehen
+        {
+
+        }
     }
 }
