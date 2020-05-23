@@ -26,7 +26,7 @@ namespace Proj_Mutlu_Mueller
         bool _d5er4;
         bool _d5er5;
 
-        public Noten(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, 
+        public Noten(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, //Konstruktor
                     bool e5er1 = false, bool e5er2 = false, bool e5er3 = false, bool e5er4 = false, bool e5er5 = false,
                     bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false)
         {
@@ -47,6 +47,183 @@ namespace Proj_Mutlu_Mueller
             _m5er3 = m5er3;
             _m5er4 = m5er4;
             _m5er5 = m5er5;
+        }
+        //get-set Methoden für alle variablen setzten
+        public bool M5er1
+        {
+            get
+            {
+                return _m5er1;
+            }
+            set
+            {
+                _m5er1 = value;
+            }
+        }
+
+        public bool M5er2
+        {
+            get
+            {
+                return _m5er2;
+            }
+            set
+            {
+                _m5er2 = value;
+            }
+        }
+
+        public bool M5er3
+        {
+            get
+            {
+                return _m5er3;
+            }
+            set
+            {
+                _m5er3 = value;
+            }
+        }
+
+        public bool M5er4
+        {
+            get
+            {
+                return _m5er4;
+            }
+            set
+            {
+                _m5er4 = value;
+            }
+        }
+
+        public bool M5er5
+        {
+            get
+            {
+                return _m5er5;
+            }
+            set
+            {
+                _m5er5 = value;
+            }
+        }
+
+        public bool E5er1
+        {
+            get
+            {
+                return _e5er1;
+            }
+            set
+            {
+                _e5er1 = value;
+            }
+        }
+
+        public bool E5er2
+        {
+            get
+            {
+                return _e5er2;
+            }
+            set
+            {
+                _e5er2 = value;
+            }
+        }
+
+        public bool E5er3
+        {
+            get
+            {
+                return _e5er3;
+            }
+            set
+            {
+                _e5er3 = value;
+            }
+        }
+
+        public bool E5er4
+        {
+            get
+            {
+                return _e5er4;
+            }
+            set
+            {
+                _e5er4 = value;
+            }
+        }
+
+        public bool E5er5
+        {
+            get
+            {
+                return _e5er5;
+            }
+            set
+            {
+                _e5er5 = value;
+            }
+        }
+
+        public bool D5er1
+        {
+            get
+            {
+                return _d5er1;
+            }
+            set
+            {
+                _d5er1 = value;
+            }
+        }
+
+        public bool D5er2
+        {
+            get
+            {
+                return _d5er2;
+            }
+            set
+            {
+                _d5er2 = value;
+            }
+        }
+        public bool D5er3
+        {
+            get
+            {
+                return _d5er3;
+            }
+            set
+            {
+                _d5er3 = value;
+            }
+        }
+        public bool D5er4
+        {
+            get
+            {
+                return _d5er4;
+            }
+            set
+            {
+                _d5er4 = value;
+            }
+        }
+        public bool D5er5
+        {
+            get
+            {
+                return _d5er5;
+            }
+            set
+            {
+                _d5er5 = value;
+            }
         }
     }
 }
