@@ -252,7 +252,32 @@ namespace Proj_Mutlu_Mueller
             _deutschparkplatz = deutschparkplatz;
             _englischparkplatz = englischparkplatz; 
         }
-        //funktionen zum managen der Parkplätze einfügen
+        //Get Funktionen für Parkplätze
+        public int Matheparkplatz
+        {
+            get
+            {
+                return _matheparkplatz;
+            }
+        }
+
+        public int Deutschparkplatz
+        {
+            get
+            {
+                return _deutschparkplatz;
+
+            }
+        }
+
+        public int Englischparkplatz
+        {
+            get
+            {
+                return _englischparkplatz;
+            }
+        }
+        //funktionen zum managen der Parkplätze
         public void EnglischparkplatzAdd()
         {
             _englischparkplatz++;
