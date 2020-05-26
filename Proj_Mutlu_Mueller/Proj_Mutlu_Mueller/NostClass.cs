@@ -228,17 +228,55 @@ namespace Proj_Mutlu_Mueller
     }
 
     public class Parkplatz : Noten
-    {
-        bool matheparkplatz;     //gesamtanzahl der geparkten 5er in jedem Fach
-        bool englischparkplatz;
-        bool deutschparkplatz;
+    {   //Parkplätze für unsere unterstützten Fächer
+        bool _matheparkplatz;     //Es darf nicht mehr als ein 5er in einem fach geparkt werden deshalb kann ich hier bool verwenden
+        bool _englischparkplatz;
+        bool _deutschparkplatz;
 
         public Parkplatz(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, //Konstruktor
                    bool e5er1 = false, bool e5er2 = false, bool e5er3 = false, bool e5er4 = false, bool e5er5 = false,
-                   bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false)
+                   bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false, bool matheparkplatz = false, bool deutschparkplatz = false, bool englischparkplatz = false)
             : base(m5er1, m5er2, m5er3, m5er4, m5er5, e5er1, e5er2, e5er3, e5er4, e5er5, d5er1, d5er2, d5er3, d5er4, d5er5) //Basiskonstruktor einbeziehen
         {
+            _matheparkplatz = matheparkplatz; // werte übergeben
+            _deutschparkplatz = deutschparkplatz;
+            _englischparkplatz = englischparkplatz; 
+        }
+        //get set für alle neuen Variablen
+        public bool Matheparkplatz
+        {
+            get
+            {
+                return _matheparkplatz;
+            }
+            set
+            {
+                _matheparkplatz = value;
+            }
+        }
 
+        public bool Englischparkplatz
+        {
+            get
+            {
+                return _englischparkplatz;
+            }
+            set
+            {
+                _englischparkplatz = value;
+            }
+        }
+
+        public bool Deutschparkplatz
+        {
+            get
+            {
+                return _deutschparkplatz;
+            }
+            set
+            {
+                _deutschparkplatz = value;
+            }
         }
     }
 }
