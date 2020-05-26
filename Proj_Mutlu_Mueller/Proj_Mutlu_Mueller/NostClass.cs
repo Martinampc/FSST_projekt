@@ -28,9 +28,15 @@ namespace Proj_Mutlu_Mueller
 
         int _jahrgang;
 
+        //Parkplätze für unsere unterstützten Fächer
+        int _matheparkplatz;
+        int _englischparkplatz;
+        int _deutschparkplatz;
+
         public Noten(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, //Basis Konstruktor
                     bool e5er1 = false, bool e5er2 = false, bool e5er3 = false, bool e5er4 = false, bool e5er5 = false,
-                    bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false, int jahrgang = 0)
+                    bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false, 
+                    int jahrgang = 0, int matheparkplatz = 0, int deutschparkplatz = 0, int englischparkplatz = 0)
         {
             if(jahrgang < 0|| jahrgang > 5)
             {
@@ -56,6 +62,20 @@ namespace Proj_Mutlu_Mueller
             _m5er3 = m5er3;
             _m5er4 = m5er4;
             _m5er5 = m5er5;
+
+            if (englischparkplatz < 0 || englischparkplatz > 2)
+                throw new Exception("Ungültige Werte für den Englischparkplatz");
+
+            if (deutschparkplatz < 0 || deutschparkplatz > 2)
+                throw new Exception("Ungültige Werte für den deutschparkplatz");
+
+            if (matheparkplatz < 0 || matheparkplatz > 2)
+                throw new Exception("Ungültige Werte für den matheparkplatz");
+
+
+            _matheparkplatz = matheparkplatz; // werte übergeben
+            _deutschparkplatz = deutschparkplatz;
+            _englischparkplatz = englischparkplatz;
         }
         //get-set Methoden für alle variablen setzten
         public bool M5er1
@@ -234,33 +254,6 @@ namespace Proj_Mutlu_Mueller
                 _d5er5 = value;
             }
         }
-    }
-
-    public class Parkplatz : Noten
-    {   //Parkplätze für unsere unterstützten Fächer
-        int _matheparkplatz;     
-        int _englischparkplatz;
-        int _deutschparkplatz;
-
-        public Parkplatz(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, //Konstruktor
-                   bool e5er1 = false, bool e5er2 = false, bool e5er3 = false, bool e5er4 = false, bool e5er5 = false,
-                   bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false, int matheparkplatz = 0, int deutschparkplatz = 0, int englischparkplatz = 0)
-            : base(m5er1, m5er2, m5er3, m5er4, m5er5, e5er1, e5er2, e5er3, e5er4, e5er5, d5er1, d5er2, d5er3, d5er4, d5er5) //Basiskonstruktor einbeziehen
-        {
-            if (englischparkplatz < 0 || englischparkplatz > 2)
-                throw new Exception("Ungültige Werte für den Englischparkplatz");
-
-            if (deutschparkplatz < 0 || deutschparkplatz > 2)
-                throw new Exception("Ungültige Werte für den deutschparkplatz");
-
-            if (matheparkplatz < 0 || matheparkplatz > 2)
-                throw new Exception("Ungültige Werte für den matheparkplatz");
-
-
-            _matheparkplatz = matheparkplatz; // werte übergeben
-            _deutschparkplatz = deutschparkplatz;
-            _englischparkplatz = englischparkplatz; 
-        }
         //Get Funktionen für Parkplätze
         public int Matheparkplatz
         {
@@ -286,6 +279,7 @@ namespace Proj_Mutlu_Mueller
                 return _englischparkplatz;
             }
         }
+
         //funktionen zum managen der Parkplätze
         public void EnglischparkplatzAdd()
         {
@@ -311,7 +305,7 @@ namespace Proj_Mutlu_Mueller
         public void EnglischparkplatzRemove()
         {
             _englischparkplatz--;
-            if (_englischparkplatz < 0) 
+            if (_englischparkplatz < 0)
                 throw new Exception("Parkplatz erlaubt keine negativen Noten");
         }
 
@@ -331,4 +325,5 @@ namespace Proj_Mutlu_Mueller
 
 
     }
+
 }
