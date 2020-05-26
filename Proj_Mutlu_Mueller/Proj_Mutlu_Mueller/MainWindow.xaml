@@ -6,7 +6,50 @@
         xmlns:local="clr-namespace:Proj_Mutlu_Mueller"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas>
-        <Button x:Name="btntest" Width="100" Height="50">Sucuk</Button>
+    <Canvas Background="AliceBlue">
+
+        <Label FontSize="25" FontWeight="Black" Background="Beige">NOST Simulator</Label>
+        <StackPanel Canvas.Top="40" Background="DarkGray">
+            <Label x:Name="English">English</Label>
+            <Label x:Name="Deutsch">Deutsch</Label>
+            <Label x:Name="Mathe">Mathe</Label>
+        </StackPanel>
+        <RadioButton x:Name="EnglishRbPositiv" Canvas.Top="45" Canvas.Left="60"></RadioButton>
+        <RadioButton x:Name="DeutschRbPositiv" Canvas.Top="70" Canvas.Left="60"></RadioButton>
+        <RadioButton x:Name="MatheRbPositiv" Canvas.Top="95" Canvas.Left="60"></RadioButton>
+        <Label x:Name="Lblpositiv" Canvas.Top="110" Canvas.Left="60">P</Label>
+        <RadioButton x:Name="EnglishRbNegativ" Canvas.Top="45" Canvas.Left="90"></RadioButton>
+        <RadioButton x:Name="DeutschRbNegativ" Canvas.Top="70" Canvas.Left="90"></RadioButton>
+        <RadioButton x:Name="MatheRbNegativ" Canvas.Top="95" Canvas.Left="90"></RadioButton>
+        <Label x:Name="Lblnegativ" Canvas.Top="110" Canvas.Left="90">N</Label>
+        <Button x:Name="BtnAufstieg" Canvas.Top="150" Canvas.Left="30">Aufstieg</Button>
+        <Button x:Name="BtnWiederholen" Canvas.Top="150" Canvas.Left="90">Wiederholen</Button>
+
+
+        <Rectangle x:Name="RectTimeLine" Canvas.Top="100" Canvas.Left="250" Height="3" Width="200" Fill="Black"></Rectangle>
+        <Rectangle Height="20" Width="3" Fill="Black" Canvas.Top="90" Canvas.Left="250"></Rectangle>
+        <Rectangle Height="20" Width="3" Fill="Black" Canvas.Top="90" Canvas.Left="300"></Rectangle>
+        <Rectangle Height="20" Width="3" Fill="Black" Canvas.Top="90" Canvas.Left="350"></Rectangle>
+        <Rectangle Height="20" Width="3" Fill="Black" Canvas.Top="90" Canvas.Left="400"></Rectangle>
+        <Rectangle Height="20" Width="3" Fill="Black" Canvas.Top="90" Canvas.Left="450"></Rectangle>
+
+        <Button x:Name="BtnPrüfen" Canvas.Top="35" Canvas.Left="420">Prüfen</Button>
+        <Label Canvas.Top="35" Canvas.Left="245" FontWeight="Black">Zeitlinie</Label>
+        <Label Canvas.Top="55" Canvas.Left="245">1</Label>
+        <Label Canvas.Top="55" Canvas.Left="295">2</Label>
+        <Label Canvas.Top="55" Canvas.Left="345">3</Label>
+        <Label Canvas.Top="55" Canvas.Left="395">4</Label>
+        <Label Canvas.Top="55" Canvas.Left="445">5</Label>
+
+        <TextBlock Canvas.Top="120" Canvas.Left="245" Width="35" Height="60"></TextBlock>
+
+        <Label x:Name="LblWiederholen" Canvas.Top="210" Canvas.Left="245" FontWeight="Black">Wiederholen:</Label>
+        <TextBox x:Name="tbWiederholen" Canvas.Top="210" Canvas.Left="340" Width="40"></TextBox>
+
+        <Label Canvas.Top="35" Canvas.Left="550" FontWeight="Black">Rucksack:</Label>
+        <Label x:Name="LblRucksack" Canvas.Top="35" Canvas.Left="650"></Label>
+
+
+
     </Canvas>
 </Window>
