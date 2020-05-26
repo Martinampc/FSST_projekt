@@ -26,10 +26,19 @@ namespace Proj_Mutlu_Mueller
         bool _d5er4;
         bool _d5er5;
 
+        int _jahrgang;
+
         public Noten(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, //Basis Konstruktor
                     bool e5er1 = false, bool e5er2 = false, bool e5er3 = false, bool e5er4 = false, bool e5er5 = false,
-                    bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false)
+                    bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false, int jahrgang = 0)
         {
+            if(jahrgang < 0|| jahrgang > 5)
+            {
+                throw new Exception("ungültiger jahrgang");
+            }
+
+            _jahrgang = jahrgang;
+
             _d5er1 = d5er1;
             _d5er2 = d5er2;
             _d5er3 = d5er3;
