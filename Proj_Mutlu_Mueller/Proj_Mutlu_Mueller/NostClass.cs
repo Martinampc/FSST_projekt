@@ -29,7 +29,7 @@ namespace Proj_Mutlu_Mueller
         int _jahrgang; //Derzeitiger Jahrgang
         int _wiederholungen; //Anzahl der Klassenwiderholungen
         bool _fail; //unausbesserbarer Fehlschlag (Schulverweis)
-        
+
 
         //Parkplätze für unsere unterstützten Fächer
         int _matheparkplatz;
@@ -42,12 +42,12 @@ namespace Proj_Mutlu_Mueller
                     int jahrgang = 0, int wiederholungen = 0, bool fail = false,
                     int matheparkplatz = 0, int deutschparkplatz = 0, int englischparkplatz = 0)
         {
-            if(jahrgang < 0|| jahrgang > 6)
+            if (jahrgang < 0 || jahrgang > 6)
             {
                 throw new Exception("ungültiger jahrgang");
             }
 
-            if(wiederholungen < 0 || wiederholungen > 2)
+            if (wiederholungen < 0 || wiederholungen > 3)
             {
                 throw new Exception("Ungültige Anzahl der Wiederholungen");
             }
@@ -274,7 +274,11 @@ namespace Proj_Mutlu_Mueller
                 {
                     _fail = true;
                 }
-                if (_deutschparkplatz >= 2 || _matheparkplatz >=2 || _englischparkplatz >=2) //Man dar nur einen 5er pro Fach haben
+                if (_deutschparkplatz >= 2 || _matheparkplatz >= 2 || _englischparkplatz >= 2) //Man dar nur einen 5er pro Fach haben
+                {
+                    _fail = true;
+                }
+                if (_wiederholungen >=3) // man darf nicht öfter als 2 mal sitzenbleiben
                 {
                     _fail = true;
                 }
@@ -295,7 +299,7 @@ namespace Proj_Mutlu_Mueller
             }
             set
             {
-                if (value < 0 || value > 2)
+                if (value < 0 || value > 3)
                 {
                     throw new Exception("Ungültige Anzahl der Wiederholungen");
                 }
@@ -320,6 +324,17 @@ namespace Proj_Mutlu_Mueller
                 _jahrgang = value;
             }
         }
+
+        public void Aufsteigen()
+        {
+            _jahrgang++;
+        }
+       
+        public void Sitzenbleiben()
+        {
+            _wiederholungen++;
+        }
+
         //Get Funktionen für Parkplätze
         public int Matheparkplatz
         {
