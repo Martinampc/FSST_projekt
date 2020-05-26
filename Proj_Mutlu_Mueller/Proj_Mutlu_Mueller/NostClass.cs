@@ -229,54 +229,72 @@ namespace Proj_Mutlu_Mueller
 
     public class Parkplatz : Noten
     {   //Parkplätze für unsere unterstützten Fächer
-        bool _matheparkplatz;     //Es darf nicht mehr als ein 5er in einem fach geparkt werden deshalb kann ich hier bool verwenden
-        bool _englischparkplatz;
-        bool _deutschparkplatz;
+        int _matheparkplatz;     
+        int _englischparkplatz;
+        int _deutschparkplatz;
 
         public Parkplatz(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, //Konstruktor
                    bool e5er1 = false, bool e5er2 = false, bool e5er3 = false, bool e5er4 = false, bool e5er5 = false,
-                   bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false, bool matheparkplatz = false, bool deutschparkplatz = false, bool englischparkplatz = false)
+                   bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false, int matheparkplatz = 0, int deutschparkplatz = 0, int englischparkplatz = 0)
             : base(m5er1, m5er2, m5er3, m5er4, m5er5, e5er1, e5er2, e5er3, e5er4, e5er5, d5er1, d5er2, d5er3, d5er4, d5er5) //Basiskonstruktor einbeziehen
         {
+            if (englischparkplatz < 0 || englischparkplatz > 2)
+                throw new Exception("Ungültige Werte für den Englischparkplatz");
+
+            if (deutschparkplatz < 0 || deutschparkplatz > 2)
+                throw new Exception("Ungültige Werte für den deutschparkplatz");
+
+            if (matheparkplatz < 0 || matheparkplatz > 2)
+                throw new Exception("Ungültige Werte für den matheparkplatz");
+
+
             _matheparkplatz = matheparkplatz; // werte übergeben
             _deutschparkplatz = deutschparkplatz;
             _englischparkplatz = englischparkplatz; 
         }
-        //get set für alle neuen Variablen
-        public bool Matheparkplatz
+        //funktionen zum managen der Parkplätze einfügen
+        public void EnglischparkplatzAdd()
         {
-            get
-            {
-                return _matheparkplatz;
-            }
-            set
-            {
-                _matheparkplatz = value;
-            }
+            _englischparkplatz++;
+            if (_englischparkplatz >= 2) //Es darf pro Fach nur ein 5er geparkt werden
+                throw new Exception("Schule Fehlgeschlagen (return einfügen?)");
         }
 
-        public bool Englischparkplatz
+        public void DeutschparkplatzAdd()
         {
-            get
-            {
-                return _englischparkplatz;
-            }
-            set
-            {
-                _englischparkplatz = value;
-            }
+            _deutschparkplatz++;
+            if (_deutschparkplatz >= 2) //Es darf pro Fach nur ein 5er geparkt werden
+                throw new Exception("Schule Fehlgeschlagen (return einfügen?)");
         }
 
-        public bool Deutschparkplatz
+        public void MatheparkplatzAdd()
         {
-            get
-            {
-                return _deutschparkplatz;
-            }
-            set
-            {
-                _deutschparkplatz = value;
-            }
+            _matheparkplatz++;
+            if (_matheparkplatz >= 2) //Es darf pro Fach nur ein 5er geparkt werden
+                throw new Exception("Schule Fehlgeschlagen (return einfügen?)");
         }
+
+        public void EnglischparkplatzRemove()
+        {
+            _englischparkplatz--;
+            if (_englischparkplatz < 0) 
+                throw new Exception("Parkplatz erlaubt keine negativen Noten");
+        }
+
+        public void DeutschparkplatzRemove()
+        {
+            _deutschparkplatz--;
+            if (_deutschparkplatz < 0)
+                throw new Exception("Parkplatz erlaubt keine negativen Noten");
+        }
+
+        public void MatheparkplatzRemove()
+        {
+            _matheparkplatz--;
+            if (_matheparkplatz < 0)
+                throw new Exception("Parkplatz erlaubt keine negativen Noten");
+        }
+
+
     }
 }
