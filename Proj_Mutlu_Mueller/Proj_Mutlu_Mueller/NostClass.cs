@@ -340,6 +340,18 @@ namespace Proj_Mutlu_Mueller
         {
             get
             {
+                if (_m5er1 == true && _jahrgang == 3) //wenn der 5er nach einem Jahr nicht ausgebessert wird wird er auf den Parkplatz verschoben
+                    _matheparkplatz++;
+                if (_m5er2 == true && _jahrgang == 4)
+                    _matheparkplatz++;
+                if (_m5er3 == true && _jahrgang == 5)
+                    _matheparkplatz++;
+                if (_m5er4 == true && _jahrgang == 6)
+                    _matheparkplatz++;
+                if (_m5er5 == true && _jahrgang == 6)
+                    _matheparkplatz++;
+
+
                 return _matheparkplatz;
             }
         }
@@ -348,6 +360,17 @@ namespace Proj_Mutlu_Mueller
         {
             get
             {
+                if (_d5er1 == true && _jahrgang == 3) //wenn der 5er nach einem Jahr nicht ausgebessert wird wird er auf den Parkplatz verschoben
+                    _deutschparkplatz++;
+                if (_d5er2 == true && _jahrgang == 4)
+                    _deutschparkplatz++;
+                if (_d5er3 == true && _jahrgang == 5)
+                    _deutschparkplatz++;
+                if (_d5er4 == true && _jahrgang == 6)
+                    _deutschparkplatz++;
+                if (_d5er5 == true && _jahrgang == 6)
+                    _deutschparkplatz++;
+
                 return _deutschparkplatz;
 
             }
@@ -357,6 +380,17 @@ namespace Proj_Mutlu_Mueller
         {
             get
             {
+                if (_e5er1 == true && _jahrgang == 3) //wenn der 5er nach einem Jahr nicht ausgebessert wird wird er auf den Parkplatz verschoben
+                    _englischparkplatz++;
+                if (_e5er1 == true && _jahrgang == 4)
+                    _englischparkplatz++;
+                if (_e5er1 == true && _jahrgang == 5)
+                    _englischparkplatz++;
+                if (_e5er1 == true && _jahrgang == 6)
+                    _englischparkplatz++;
+                if (_e5er1 == true && _jahrgang == 6)
+                    _englischparkplatz++;
+
                 return _englischparkplatz;
             }
         }
