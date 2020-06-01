@@ -225,6 +225,19 @@ namespace Proj_Mutlu_Mueller
             else if (Noten.Jahrgang == 5)
                 Canvas.SetLeft(JahrgangsPUNKT, 245 + 200);
 
+            if (Noten.Matheparkplatz > 0)
+            {
+                MatheRucksack.Content = "Mathe";            
+            }
+            if (Noten.Deutschparkplatz > 0)
+            {
+                DeutcschRucksack.Content = "Deutsch";
+            }
+            if (Noten.Englischparkplatz > 0) 
+            {
+                EnglishRucksack.Content = "English";
+            }
+
 
         }
 

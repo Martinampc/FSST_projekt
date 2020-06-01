@@ -46,11 +46,11 @@
         <TextBox x:Name="tbWiederholen" Canvas.Top="210" Canvas.Left="340" Width="40"></TextBox>
 
         <Label Canvas.Top="35" Canvas.Left="550" FontWeight="Black">Rucksack:</Label>
-        <Label x:Name="LblRucksack" Canvas.Top="35" Canvas.Left="650"></Label>
-
-        <Label x:Name="lblFail" Canvas.Left="200" Canvas.Top="0" FontSize="200" FontWeight="Bold" Foreground="Red" Visibility="Hidden">FAIL</Label>
-
         
+        <Label x:Name="LblRucksack" Canvas.Top="35" Canvas.Left="650"></Label>
+        <Label x:Name="EnglishRucksack" Canvas.Top="35" Canvas.Left="650"></Label>
+        <Label x:Name="DeutcschRucksack" Canvas.Top="55" Canvas.Left="650"></Label>
+        <Label x:Name="MatheRucksack" Canvas.Top="75" Canvas.Left="650"></Label>
 
 
 

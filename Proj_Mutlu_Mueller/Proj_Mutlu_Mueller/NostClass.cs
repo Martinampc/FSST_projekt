@@ -39,7 +39,7 @@ namespace Proj_Mutlu_Mueller
         public Noten(bool m5er1 = false, bool m5er2 = false, bool m5er3 = false, bool m5er4 = false, bool m5er5 = false, //Konstruktor
                     bool e5er1 = false, bool e5er2 = false, bool e5er3 = false, bool e5er4 = false, bool e5er5 = false,
                     bool d5er1 = false, bool d5er2 = false, bool d5er3 = false, bool d5er4 = false, bool d5er5 = false,
-                    int jahrgang = 0, int wiederholungen = 0, bool fail = false,
+                    int jahrgang = 1, int wiederholungen = 0, bool fail = false,
                     int matheparkplatz = 0, int deutschparkplatz = 0, int englischparkplatz = 0)
         {
             if (jahrgang < 0 || jahrgang > 6)
