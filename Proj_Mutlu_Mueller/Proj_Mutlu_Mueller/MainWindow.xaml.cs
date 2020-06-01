@@ -23,12 +23,20 @@ namespace Proj_Mutlu_Mueller
     public partial class MainWindow : Window
     {
         Noten Noten = new Noten();
-        
-        
+        Ellipse JahrgangsPUNKT = new Ellipse();
+
+
         public MainWindow()
         {
             InitializeComponent();
-            
+           
+            JahrgangsPUNKT.Width = 10;
+            JahrgangsPUNKT.Height = 10;
+            JahrgangsPUNKT.Fill = Brushes.Black;
+            Canvas.SetLeft(JahrgangsPUNKT, 245);
+            Canvas.SetTop(JahrgangsPUNKT, 95);
+            Simulator.Children.Add(JahrgangsPUNKT);
+
         }
 
         private void BtnAufstieg_Click(object sender, RoutedEventArgs e)
@@ -204,13 +212,7 @@ namespace Proj_Mutlu_Mueller
                 Simulator.Children.Add(lblfail);
             }
 
-            Ellipse JahrgangsPUNKT = new Ellipse();
-            JahrgangsPUNKT.Width = 10;
-            JahrgangsPUNKT.Height = 10;
-            JahrgangsPUNKT.Fill = Brushes.Black;
-            Canvas.SetLeft(JahrgangsPUNKT, 245);
-            Canvas.SetTop(JahrgangsPUNKT, 95);
-            Simulator.Children.Add(JahrgangsPUNKT);
+           
 
             if (Noten.Jahrgang == 1)
                 Canvas.SetLeft(JahrgangsPUNKT, 245);
