@@ -395,6 +395,8 @@ namespace Proj_Mutlu_Mueller
             }
         }
 
+        public bool Visible { get; set; }
+
        
 
         //funktionen zum managen der Parkplätze

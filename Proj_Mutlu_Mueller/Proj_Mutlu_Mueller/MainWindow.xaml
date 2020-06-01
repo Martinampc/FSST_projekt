@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Proj_Mutlu_Mueller"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Canvas Background="AliceBlue">
+    <Canvas x:Name="Simulator" Background="AliceBlue">
 
         <Label FontSize="25" FontWeight="Black" Background="Beige">NOST Simulator</Label>
         <StackPanel Canvas.Top="40" Background="DarkGray">
@@ -41,11 +41,6 @@
         <Label Canvas.Top="55" Canvas.Left="395">4</Label>
         <Label Canvas.Top="55" Canvas.Left="445">5</Label>
 
-        <Ellipse x:Name="Jahrgang1Pkt" Width="10" Height="10" Fill="Black" Canvas.Left="245" Canvas.Top="95" Visibility="Visible"></Ellipse>
-        <Ellipse x:Name="Jahrgang2Pkt" Width="10" Height="10" Fill="Black" Canvas.Left="295" Canvas.Top="95" Visibility="Hidden"></Ellipse>
-        <Ellipse x:Name="Jahrgang3Pkt" Width="10" Height="10" Fill="Black" Canvas.Left="345" Canvas.Top="95" Visibility="Hidden"></Ellipse>
-        <Ellipse x:Name="Jahrgang4Pkt" Width="10" Height="10" Fill="Black" Canvas.Left="395" Canvas.Top="95" Visibility="Hidden"></Ellipse>
-        <Ellipse x:Name="Jahrgang5Pkt" Width="10" Height="10" Fill="Black" Canvas.Left="445" Canvas.Top="95" Visibility="Hidden"></Ellipse>
 
         <TextBlock Canvas.Top="120" Canvas.Left="245" Width="35" Height="60"></TextBlock>
 
@@ -56,6 +51,8 @@
         <Label x:Name="LblRucksack" Canvas.Top="35" Canvas.Left="650"></Label>
 
         <Label x:Name="lblFail" Canvas.Left="200" Canvas.Top="0" FontSize="200" FontWeight="Bold" Foreground="Red" Visibility="Hidden">FAIL</Label>
+
+        
 
 
 

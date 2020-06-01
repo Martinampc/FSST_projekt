@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 using Proj_Mutlu_Mueller;
 
 namespace Proj_Mutlu_Mueller
@@ -36,102 +37,116 @@ namespace Proj_Mutlu_Mueller
             Noten.Aufsteigen(); //Jahrgang + 1
 
             //Deutschnoten abfragen
-            if(/*RadiobuttonDeutsch = Negativ */ && Noten.Jahrgang == 1)
+            if(DeutschRbNegativ.IsChecked==true && Noten.Jahrgang == 1)
             {
                 Noten.D5er1 = true;
             }
 
-            if (/*RadiobuttonDeutsch = Negativ */ && Noten.Jahrgang == 2)
+            if (DeutschRbNegativ.IsChecked == true && Noten.Jahrgang == 2)
             {
                 Noten.D5er2 = true;
             }
 
-            if (/*RadiobuttonDeutsch = Negativ */ && Noten.Jahrgang == 3)
+            if (DeutschRbNegativ.IsChecked == true && Noten.Jahrgang == 3)
             {
                 Noten.D5er3 = true;
             }
 
-            if (/*RadiobuttonDeutsch = Negativ */ && Noten.Jahrgang == 4)
+            if (DeutschRbNegativ.IsChecked == true && Noten.Jahrgang == 4)
             {
                 Noten.D5er4 = true;
             }
 
-            if (/*RadiobuttonDeutsch = Negativ */ && Noten.Jahrgang == 5)
+            if (DeutschRbNegativ.IsChecked == true && Noten.Jahrgang == 5)
             {
                 Noten.D5er5 = true;
             }
 
             //Mathenoten abfragen
-            if (/*RadiobuttonMathe = Negativ */ && Noten.Jahrgang == 1)
+            if (MatheRbNegativ.IsChecked==true && Noten.Jahrgang == 1)
             {
                 Noten.M5er1 = true;
             }
 
-            if (/*RadiobuttonMathe = Negativ */ && Noten.Jahrgang == 2)
+            if (MatheRbNegativ.IsChecked == true && Noten.Jahrgang == 2)
             {
                 Noten.M5er2 = true;
             }
 
-            if (/*RadiobuttonMathe = Negativ */ && Noten.Jahrgang == 3)
+            if (MatheRbNegativ.IsChecked == true && Noten.Jahrgang == 3)
             {
                 Noten.M5er3 = true;
             }
 
-            if (/*RadiobuttonMathe = Negativ */ && Noten.Jahrgang == 4)
+            if (MatheRbNegativ.IsChecked == true && Noten.Jahrgang == 4)
             {
                 Noten.M5er4 = true;
             }
 
-            if (/*RadiobuttonMathe = Negativ */ && Noten.Jahrgang == 5)
+            if (MatheRbNegativ.IsChecked == true && Noten.Jahrgang == 5)
             {
                 Noten.M5er5 = true;
             }
 
             //Englischnoten Abfragen
-            if (/*RadiobuttonEnglisch = Negativ */ && Noten.Jahrgang == 1)
+            if (EnglishRbNegativ.IsChecked == true && Noten.Jahrgang == 1)
             {
                 Noten.E5er1 = true;
             }
 
-            if (/*RadiobuttonEnglisch = Negativ */ && Noten.Jahrgang == 2)
+            if (EnglishRbNegativ.IsChecked == true && Noten.Jahrgang == 2)
             {
                 Noten.E5er2 = true;
             }
 
-            if (/*RadiobuttonEnglisch = Negativ */ && Noten.Jahrgang == 3)
+            if (EnglishRbNegativ.IsChecked == true && Noten.Jahrgang == 3)
             {
                 Noten.E5er3 = true;
             }
 
-            if (/*RadiobuttonEnglisch = Negativ */ && Noten.Jahrgang == 4)
+            if (EnglishRbNegativ.IsChecked == true && Noten.Jahrgang == 4)
             {
                 Noten.E5er4 = true;
             }
 
-            if (/*RadiobuttonEnglisch = Negativ */ && Noten.Jahrgang == 5)
+            if (EnglishRbNegativ.IsChecked == true && Noten.Jahrgang == 5)
             {
                 Noten.E5er5 = true;
             }
 
 
             //Überprüfen ob Schulabbruch
-            if(Noten.Fail == true)
+
+            Label lblfail = new Label();
+            lblfail.Content = "FAIL";
+            lblfail.FontSize = 200;
+            lblfail.Foreground = Brushes.Red;
+
+            if (Noten.Fail == true)
             {
-                //Hier Visuelles Fail symbol einfügen
+                Canvas.SetLeft(lblfail, 200); //Hier Visuelles Fail symbol einfügen
+                Simulator.Children.Add(lblfail);
             }
 
-            //Jahrgang2Pkt.Visibility = Visibility;
-            //int counter = 0;
+            Ellipse JahrgangsPUNKT = new Ellipse();
+            JahrgangsPUNKT.Width = 10;
+            JahrgangsPUNKT.Height = 10;
+            JahrgangsPUNKT.Fill = Brushes.Black;
+            Canvas.SetLeft(JahrgangsPUNKT, 245);
+            Canvas.SetTop(JahrgangsPUNKT, 95);
+            Simulator.Children.Add(JahrgangsPUNKT);
 
-            //for (int i = 0; i < 6; i++)
-            //{
-            //    counter++;
-            //}
+            if (Noten.Jahrgang == 1)
+                Canvas.SetLeft(JahrgangsPUNKT, 245);
+            else if (Noten.Jahrgang == 2)
+                Canvas.SetLeft(JahrgangsPUNKT, 245 + 50);
+            else if (Noten.Jahrgang == 3)
+                Canvas.SetLeft(JahrgangsPUNKT, 245 + 100);
+            else if (Noten.Jahrgang == 4)
+                Canvas.SetLeft(JahrgangsPUNKT, 245 + 150);
+            else if (Noten.Jahrgang == 5)
+                Canvas.SetLeft(JahrgangsPUNKT, 245 + 200);
 
-            //if (counter == 1)
-            //    Jahrgang1Pkt.Visibility == true;
-
-            //(Noten.Jahrgang == 1)
 
         }
 
@@ -139,10 +154,16 @@ namespace Proj_Mutlu_Mueller
         {
             Noten.Sitzenbleiben(); //wiederholungen +1
 
+            Label lblfail = new Label();
+            lblfail.Content = "FAIL";
+            lblfail.FontSize = 200;
+            lblfail.Foreground = Brushes.Red;
+
             //Überprüfen ob Schulabbruch
             if (Noten.Fail == true)
             {
-                lblFail.Visible = "false";//Hier Visuelles Fail symbol einfügen
+                Canvas.SetLeft(lblfail, 200); //Hier Visuelles Fail symbol einfügen
+                Simulator.Children.Add(lblfail);
             }
 
         }
@@ -153,6 +174,25 @@ namespace Proj_Mutlu_Mueller
             Noten.Jahrgang = jahrgang--; //Peim Prüfungsknopf wird man in das vorherige Jahr gesetzt und aknn dann seine Korigierten Noten eintragen
 
             //AN ERAY: Punkt auf der Zeitlinie muss sich zurückbewegen (vieleicht andere Farbe als normal währ cool)
+
+            Ellipse JahrgangsPUNKT = new Ellipse();
+            JahrgangsPUNKT.Width = 10;
+            JahrgangsPUNKT.Height = 10;
+            JahrgangsPUNKT.Fill = Brushes.Blue;
+            Canvas.SetLeft(JahrgangsPUNKT, 245);
+            Canvas.SetTop(JahrgangsPUNKT, 95);
+            Simulator.Children.Add(JahrgangsPUNKT);
+
+            if (Noten.Jahrgang == 1)
+                Canvas.SetLeft(JahrgangsPUNKT, 245);
+            else if (Noten.Jahrgang == 2)
+                Canvas.SetLeft(JahrgangsPUNKT, 245 + 50);
+            else if (Noten.Jahrgang == 3)
+                Canvas.SetLeft(JahrgangsPUNKT, 245 + 100);
+            else if (Noten.Jahrgang == 4)
+                Canvas.SetLeft(JahrgangsPUNKT, 245 + 150);
+            else if (Noten.Jahrgang == 5)
+                Canvas.SetLeft(JahrgangsPUNKT, 245 + 200);
         }
     }
 }
