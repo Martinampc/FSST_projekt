@@ -23,7 +23,7 @@
         <RadioButton x:Name="MatheRbNegativ" Canvas.Top="95" Canvas.Left="90"></RadioButton>
         <Label x:Name="Lblnegativ" Canvas.Top="110" Canvas.Left="90">N</Label>
         <Button x:Name="BtnAufstieg" Canvas.Top="150" Canvas.Left="30" Click="BtnAufstieg_Click">Aufstieg</Button>
-        <Button x:Name="BtnWiederholen" Canvas.Top="150" Canvas.Left="90">Wiederholen</Button>
+        <Button x:Name="BtnWiederholen" Canvas.Top="150" Canvas.Left="90" Click="BtnWiederholen_Click">Wiederholen</Button>
 
 
         <Rectangle x:Name="RectTimeLine" Canvas.Top="100" Canvas.Left="250" Height="3" Width="200" Fill="Black"></Rectangle>
@@ -33,7 +33,7 @@
         <Rectangle Height="20" Width="3" Fill="Black" Canvas.Top="90" Canvas.Left="400"></Rectangle>
         <Rectangle Height="20" Width="3" Fill="Black" Canvas.Top="90" Canvas.Left="450"></Rectangle>
 
-        <Button x:Name="BtnPrüfen" Canvas.Top="35" Canvas.Left="420">Prüfen</Button>
+        <Button x:Name="BtnPrüfen" Canvas.Top="35" Canvas.Left="420" Click="BtnPrüfen_Click">Prüfen</Button>
         <Label Canvas.Top="35" Canvas.Left="245" FontWeight="Black">Zeitlinie</Label>
         <Label Canvas.Top="55" Canvas.Left="245">1</Label>
         <Label Canvas.Top="55" Canvas.Left="295">2</Label>

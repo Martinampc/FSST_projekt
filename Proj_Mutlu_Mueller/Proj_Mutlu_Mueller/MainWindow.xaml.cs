@@ -120,5 +120,25 @@ namespace Proj_Mutlu_Mueller
                 //Hier Visuelles Fail symbol einfügen
             }
         }
+
+        private void BtnWiederholen_Click(object sender, RoutedEventArgs e)
+        {
+            Noten.Sitzenbleiben(); //wiederholungen +1
+
+            //Überprüfen ob Schulabbruch
+            if (Noten.Fail == true)
+            {
+                //Hier Visuelles Fail symbol einfügen
+            }
+
+        }
+
+        private void BtnPrüfen_Click(object sender, RoutedEventArgs e)
+        {
+            int jahrgang = Noten.Jahrgang;
+            Noten.Jahrgang = jahrgang--; //Peim Prüfungsknopf wird man in das vorherige Jahr gesetzt und aknn dann seine Korigierten Noten eintragen
+
+            //AN ERAY: Punkt auf der Zeitlinie muss sich zurückbewegen (vieleicht andere Farbe als normal währ cool)
+        }
     }
 }
