@@ -119,6 +119,20 @@ namespace Proj_Mutlu_Mueller
             {
                 //Hier Visuelles Fail symbol einfügen
             }
+
+            //Jahrgang2Pkt.Visibility = Visibility;
+            //int counter = 0;
+
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    counter++;
+            //}
+
+            //if (counter == 1)
+            //    Jahrgang1Pkt.Visibility == true;
+
+            //(Noten.Jahrgang == 1)
+
         }
 
         private void BtnWiederholen_Click(object sender, RoutedEventArgs e)
@@ -128,7 +142,7 @@ namespace Proj_Mutlu_Mueller
             //Überprüfen ob Schulabbruch
             if (Noten.Fail == true)
             {
-                //Hier Visuelles Fail symbol einfügen
+                lblFail.Visible = "false";//Hier Visuelles Fail symbol einfügen
             }
 
         }
