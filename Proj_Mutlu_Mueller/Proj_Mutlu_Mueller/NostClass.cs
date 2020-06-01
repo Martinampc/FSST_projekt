@@ -270,11 +270,11 @@ namespace Proj_Mutlu_Mueller
         {
             get
             {
-                if (_deutschparkplatz == 1 && _englischparkplatz == 1 && _matheparkplatz == 1 && _jahrgang == 6) //ende der 5. Klasse müssen alle Parkplätze gereumt sein
+                if ((_deutschparkplatz == 1 || _englischparkplatz == 1 || _matheparkplatz == 1) && _jahrgang == 6) //ende der 5. Klasse müssen alle Parkplätze gereumt sein
                 {
                     _fail = true;
                 }
-                if (_deutschparkplatz >= 2 || _matheparkplatz >= 2 || _englischparkplatz >= 2) //Man dar nur einen 5er pro Fach haben
+                if (_deutschparkplatz > 1 || _matheparkplatz > 1 || _englischparkplatz > 1) //Man dar nur einen 5er pro Fach haben
                 {
                     _fail = true;
                 }
@@ -360,13 +360,13 @@ namespace Proj_Mutlu_Mueller
         {
             get
             {
-                if (_d5er1 == true && _jahrgang == 3) //wenn der 5er nach einem Jahr nicht ausgebessert wird wird er auf den Parkplatz verschoben
+                if (_d5er1 == true && _jahrgang == 2) //wenn der 5er nach einem Jahr nicht ausgebessert wird wird er auf den Parkplatz verschoben
                     _deutschparkplatz++;
-                if (_d5er2 == true && _jahrgang == 4)
+                if (_d5er2 == true && _jahrgang == 3)
                     _deutschparkplatz++;
-                if (_d5er3 == true && _jahrgang == 5)
+                if (_d5er3 == true && _jahrgang == 4)
                     _deutschparkplatz++;
-                if (_d5er4 == true && _jahrgang == 6)
+                if (_d5er4 == true && _jahrgang == 5)
                     _deutschparkplatz++;
                 if (_d5er5 == true && _jahrgang == 6)
                     _deutschparkplatz++;
@@ -380,15 +380,15 @@ namespace Proj_Mutlu_Mueller
         {
             get
             {
-                if (_e5er1 == true && _jahrgang == 3) //wenn der 5er nach einem Jahr nicht ausgebessert wird wird er auf den Parkplatz verschoben
+                if (_e5er1 == true && _jahrgang == 2) //wenn der 5er nach einem Jahr nicht ausgebessert wird wird er auf den Parkplatz verschoben
                     _englischparkplatz++;
-                if (_e5er1 == true && _jahrgang == 4)
+                if (_e5er2 == true && _jahrgang == 3)
                     _englischparkplatz++;
-                if (_e5er1 == true && _jahrgang == 5)
+                if (_e5er3 == true && _jahrgang == 4)
                     _englischparkplatz++;
-                if (_e5er1 == true && _jahrgang == 6)
+                if (_e5er4 == true && _jahrgang == 5)
                     _englischparkplatz++;
-                if (_e5er1 == true && _jahrgang == 6)
+                if (_e5er5 == true && _jahrgang == 6)
                     _englischparkplatz++;
 
                 return _englischparkplatz;

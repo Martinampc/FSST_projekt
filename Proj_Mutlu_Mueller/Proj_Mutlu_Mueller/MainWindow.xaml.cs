@@ -42,10 +42,15 @@ namespace Proj_Mutlu_Mueller
         private void BtnAufstieg_Click(object sender, RoutedEventArgs e)
         {
 
+
             Noten.Aufsteigen(); //Jahrgang + 1
 
+            
+
+           
+
             //Deutschnoten abfragen
-            if(CbDeutsch.IsChecked==true && Noten.Jahrgang == 1)
+            if (CbDeutsch.IsChecked==true && Noten.Jahrgang == 1)
             {
                 Noten.D5er1 = true;
             }
@@ -199,12 +204,14 @@ namespace Proj_Mutlu_Mueller
             }
 
 
-            //Überprüfen ob Schulabbruch
-
             Label lblfail = new Label();
             lblfail.Content = "FAIL";
             lblfail.FontSize = 200;
             lblfail.Foreground = Brushes.Red;
+
+            //Überprüfen ob Schulabbruch
+
+
 
             if (Noten.Fail == true)
             {
@@ -212,7 +219,6 @@ namespace Proj_Mutlu_Mueller
                 Simulator.Children.Add(lblfail);
             }
 
-           
 
             if (Noten.Jahrgang == 1)
                 Canvas.SetLeft(JahrgangsPUNKT, 245);
@@ -227,7 +233,7 @@ namespace Proj_Mutlu_Mueller
 
             if (Noten.Matheparkplatz > 0)
             {
-                MatheRucksack.Content = "Mathe";            
+                MatheRucksack.Content = "Mathe" + Noten.Matheparkplatz+Noten.Jahrgang;            
             }
             if (Noten.Deutschparkplatz > 0)
             {
@@ -252,7 +258,6 @@ namespace Proj_Mutlu_Mueller
             lblfail.FontSize = 200;
             lblfail.Foreground = Brushes.Red;
 
-            //Überprüfen ob Schulabbruch
             if (Noten.Fail == true)
             {
                 Canvas.SetLeft(lblfail, 200); //Hier Visuelles Fail symbol einfügen
