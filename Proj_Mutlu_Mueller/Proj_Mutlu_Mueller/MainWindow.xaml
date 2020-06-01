@@ -22,7 +22,7 @@
         <RadioButton x:Name="DeutschRbNegativ" Canvas.Top="70" Canvas.Left="90"></RadioButton>
         <RadioButton x:Name="MatheRbNegativ" Canvas.Top="95" Canvas.Left="90"></RadioButton>
         <Label x:Name="Lblnegativ" Canvas.Top="110" Canvas.Left="90">N</Label>
-        <Button x:Name="BtnAufstieg" Canvas.Top="150" Canvas.Left="30">Aufstieg</Button>
+        <Button x:Name="BtnAufstieg" Canvas.Top="150" Canvas.Left="30" Click="BtnAufstieg_Click">Aufstieg</Button>
         <Button x:Name="BtnWiederholen" Canvas.Top="150" Canvas.Left="90">Wiederholen</Button>
 
 

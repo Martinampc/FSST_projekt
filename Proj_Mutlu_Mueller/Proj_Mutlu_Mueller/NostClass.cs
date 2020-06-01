@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proj_Mutlu_Mueller
 {
-    public abstract class Noten
+    public class Noten
     {
         bool _m5er1; //negative Mathenote in jahrgängen 1 bis 5
         bool _m5er2;
