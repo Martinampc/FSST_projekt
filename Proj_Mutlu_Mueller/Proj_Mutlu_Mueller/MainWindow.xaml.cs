@@ -42,14 +42,30 @@ namespace Proj_Mutlu_Mueller
                 Noten.D5er1 = true;
             }
 
+            if (DeutschRbNegativ.IsChecked == false && Noten.Jahrgang == 1)
+            {
+                Noten.D5er1 = false;
+            }
+
             if (DeutschRbNegativ.IsChecked == true && Noten.Jahrgang == 2)
             {
                 Noten.D5er2 = true;
             }
 
+            if (DeutschRbNegativ.IsChecked == false && Noten.Jahrgang == 2)
+            {
+                Noten.D5er2 = false;
+            }
+
+
             if (DeutschRbNegativ.IsChecked == true && Noten.Jahrgang == 3)
             {
                 Noten.D5er3 = true;
+            }
+
+            if (DeutschRbNegativ.IsChecked == false && Noten.Jahrgang == 3)
+            {
+                Noten.D5er3 = false;
             }
 
             if (DeutschRbNegativ.IsChecked == true && Noten.Jahrgang == 4)
@@ -57,9 +73,19 @@ namespace Proj_Mutlu_Mueller
                 Noten.D5er4 = true;
             }
 
+            if (DeutschRbNegativ.IsChecked == false && Noten.Jahrgang == 4)
+            {
+                Noten.D5er4 = false;
+            }
+
             if (DeutschRbNegativ.IsChecked == true && Noten.Jahrgang == 5)
             {
                 Noten.D5er5 = true;
+            }
+
+            if (DeutschRbNegativ.IsChecked == false && Noten.Jahrgang == 5)
+            {
+                Noten.D5er5 = false;
             }
 
             //Mathenoten abfragen
@@ -68,9 +94,19 @@ namespace Proj_Mutlu_Mueller
                 Noten.M5er1 = true;
             }
 
+            if (MatheRbNegativ.IsChecked == false && Noten.Jahrgang == 1)
+            {
+                Noten.M5er1 = false;
+            }
+
             if (MatheRbNegativ.IsChecked == true && Noten.Jahrgang == 2)
             {
                 Noten.M5er2 = true;
+            }
+
+            if (MatheRbNegativ.IsChecked == false && Noten.Jahrgang == 2)
+            {
+                Noten.M5er2 = false;
             }
 
             if (MatheRbNegativ.IsChecked == true && Noten.Jahrgang == 3)
@@ -78,14 +114,29 @@ namespace Proj_Mutlu_Mueller
                 Noten.M5er3 = true;
             }
 
+            if (MatheRbNegativ.IsChecked == false && Noten.Jahrgang == 3)
+            {
+                Noten.M5er3 = false;
+            }
+
             if (MatheRbNegativ.IsChecked == true && Noten.Jahrgang == 4)
             {
                 Noten.M5er4 = true;
             }
 
+            if (MatheRbNegativ.IsChecked == false && Noten.Jahrgang == 4)
+            {
+                Noten.M5er4 = false;
+            }
+
             if (MatheRbNegativ.IsChecked == true && Noten.Jahrgang == 5)
             {
                 Noten.M5er5 = true;
+            }
+
+            if (MatheRbNegativ.IsChecked == false && Noten.Jahrgang == 5)
+            {
+                Noten.M5er5 = false;
             }
 
             //Englischnoten Abfragen
@@ -94,9 +145,19 @@ namespace Proj_Mutlu_Mueller
                 Noten.E5er1 = true;
             }
 
+            if (EnglishRbNegativ.IsChecked == false && Noten.Jahrgang == 1)
+            {
+                Noten.E5er1 = false;
+            }
+
             if (EnglishRbNegativ.IsChecked == true && Noten.Jahrgang == 2)
             {
                 Noten.E5er2 = true;
+            }
+
+            if (EnglishRbNegativ.IsChecked == false && Noten.Jahrgang == 2)
+            {
+                Noten.E5er2 = false;
             }
 
             if (EnglishRbNegativ.IsChecked == true && Noten.Jahrgang == 3)
@@ -104,14 +165,29 @@ namespace Proj_Mutlu_Mueller
                 Noten.E5er3 = true;
             }
 
+            if (EnglishRbNegativ.IsChecked == false && Noten.Jahrgang == 3)
+            {
+                Noten.E5er3 = false;
+            }
+
             if (EnglishRbNegativ.IsChecked == true && Noten.Jahrgang == 4)
             {
                 Noten.E5er4 = true;
             }
 
+            if (EnglishRbNegativ.IsChecked == false && Noten.Jahrgang == 4)
+            {
+                Noten.E5er4 = false;
+            }
+
             if (EnglishRbNegativ.IsChecked == true && Noten.Jahrgang == 5)
             {
                 Noten.E5er5 = true;
+            }
+
+            if (EnglishRbNegativ.IsChecked == false && Noten.Jahrgang == 5)
+            {
+                Noten.E5er5 = false;
             }
 
 
