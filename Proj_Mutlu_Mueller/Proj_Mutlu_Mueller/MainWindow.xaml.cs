@@ -264,7 +264,7 @@ namespace Proj_Mutlu_Mueller
         private void BtnPrüfen_Click(object sender, RoutedEventArgs e)
         {
             int jahrgang = Noten.Jahrgang;
-            Noten.Jahrgang = jahrgang--; //Peim Prüfungsknopf wird man in das vorherige Jahr gesetzt und aknn dann seine Korigierten Noten eintragen
+            Noten.Jahrgang = jahrgang - 2; //Peim Prüfungsknopf wird man in das vorherige Jahr gesetzt und aknn dann seine Korigierten Noten eintragen
 
             //AN ERAY: Punkt auf der Zeitlinie muss sich zurückbewegen (vieleicht andere Farbe als normal währ cool)
 

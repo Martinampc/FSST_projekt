@@ -340,13 +340,13 @@ namespace Proj_Mutlu_Mueller
         {
             get
             {
-                if (_m5er1 == true && _jahrgang == 3) //wenn der 5er nach einem Jahr nicht ausgebessert wird wird er auf den Parkplatz verschoben
+                if (_m5er1 == true && _jahrgang == 2) //wenn der 5er nach einem Jahr nicht ausgebessert wird wird er auf den Parkplatz verschoben
                     _matheparkplatz++;
-                if (_m5er2 == true && _jahrgang == 4)
+                if (_m5er2 == true && _jahrgang == 3)
                     _matheparkplatz++;
-                if (_m5er3 == true && _jahrgang == 5)
+                if (_m5er3 == true && _jahrgang == 4)
                     _matheparkplatz++;
-                if (_m5er4 == true && _jahrgang == 6)
+                if (_m5er4 == true && _jahrgang == 5)
                     _matheparkplatz++;
                 if (_m5er5 == true && _jahrgang == 6)
                     _matheparkplatz++;
