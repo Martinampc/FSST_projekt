@@ -245,6 +245,8 @@ namespace Proj_Mutlu_Mueller
         {
             Noten.Sitzenbleiben(); //wiederholungen +1
 
+            lblWiederholenAnzahl.Content = Noten.Wiederholungen;
+
             Label lblfail = new Label();
             lblfail.Content = "FAIL";
             lblfail.FontSize = 200;

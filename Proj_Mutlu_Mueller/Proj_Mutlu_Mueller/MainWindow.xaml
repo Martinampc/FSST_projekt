@@ -42,8 +42,9 @@
 
         <TextBlock Canvas.Top="120" Canvas.Left="245" Width="35" Height="60"></TextBlock>
 
-        <Label x:Name="LblWiederholen" Canvas.Top="210" Canvas.Left="245" FontWeight="Black">Wiederholen:</Label>
-        <TextBox x:Name="tbWiederholen" Canvas.Top="210" Canvas.Left="340" Width="40"></TextBox>
+        <Label x:Name="LblWiederholungen" Canvas.Top="210" Canvas.Left="245" FontWeight="Black">Wiederholungen:</Label>
+        <Label x:Name="lblWiederholenAnzahl" Canvas.Top="210" Canvas.Left="375"></Label>
+
 
         <Label Canvas.Top="35" Canvas.Left="550" FontWeight="Black">Rucksack:</Label>
         
