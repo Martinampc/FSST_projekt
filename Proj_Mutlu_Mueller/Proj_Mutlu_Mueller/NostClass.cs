@@ -270,7 +270,7 @@ namespace Proj_Mutlu_Mueller
         {
             get
             {
-                if ((_deutschparkplatz == 1 || _englischparkplatz == 1 || _matheparkplatz == 1) && _jahrgang == 6) //ende der 5. Klasse müssen alle Parkplätze gereumt sein
+                if ((_deutschparkplatz /2  >= 1 || _englischparkplatz /2 >= 1 || _matheparkplatz >= 1) && _jahrgang == 6) //ende der 5. Klasse müssen alle Parkplätze gereumt sein
                 {
                     _fail = true;
                 }
@@ -340,6 +340,7 @@ namespace Proj_Mutlu_Mueller
         {
             get
             {
+                
                 if (_m5er1 == true && _jahrgang == 2) //wenn der 5er nach einem Jahr nicht ausgebessert wird wird er auf den Parkplatz verschoben
                     _matheparkplatz++;
                 if (_m5er2 == true && _jahrgang == 3)

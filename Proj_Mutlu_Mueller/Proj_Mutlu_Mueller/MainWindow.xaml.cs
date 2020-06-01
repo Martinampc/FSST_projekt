@@ -233,7 +233,7 @@ namespace Proj_Mutlu_Mueller
 
             if (Noten.Matheparkplatz > 0)
             {
-                MatheRucksack.Content = "Mathe" + Noten.Matheparkplatz+Noten.Jahrgang;            
+                MatheRucksack.Content = "Mathe";            
             }
             if (Noten.Deutschparkplatz > 0)
             {
