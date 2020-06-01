@@ -14,13 +14,11 @@
             <Label x:Name="Deutsch">Deutsch</Label>
             <Label x:Name="Mathe">Mathe</Label>
         </StackPanel>
-        <RadioButton x:Name="EnglishRbPositiv" Canvas.Top="45" Canvas.Left="60"></RadioButton>
-        <RadioButton x:Name="DeutschRbPositiv" Canvas.Top="70" Canvas.Left="60"></RadioButton>
-        <RadioButton x:Name="MatheRbPositiv" Canvas.Top="95" Canvas.Left="60"></RadioButton>
-        <Label x:Name="Lblpositiv" Canvas.Top="110" Canvas.Left="60">P</Label>
-        <RadioButton x:Name="EnglishRbNegativ" Canvas.Top="45" Canvas.Left="90"></RadioButton>
-        <RadioButton x:Name="DeutschRbNegativ" Canvas.Top="70" Canvas.Left="90"></RadioButton>
-        <RadioButton x:Name="MatheRbNegativ" Canvas.Top="95" Canvas.Left="90"></RadioButton>
+        <CheckBox x:Name="CbEnglish" Canvas.Top="45" Canvas.Left="90"></CheckBox>
+        <CheckBox x:Name="CbDeutsch" Canvas.Top="70" Canvas.Left="90"></CheckBox>
+        <CheckBox x:Name="CbMathe" Canvas.Top="95" Canvas.Left="90"></CheckBox>
+
+
         <Label x:Name="Lblnegativ" Canvas.Top="110" Canvas.Left="90">N</Label>
         <Button x:Name="BtnAufstieg" Canvas.Top="150" Canvas.Left="30" Click="BtnAufstieg_Click">Aufstieg</Button>
         <Button x:Name="BtnWiederholen" Canvas.Top="150" Canvas.Left="90" Click="BtnWiederholen_Click">Wiederholen</Button>
