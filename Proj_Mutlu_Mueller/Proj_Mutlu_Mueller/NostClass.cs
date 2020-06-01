@@ -402,21 +402,21 @@ namespace Proj_Mutlu_Mueller
         {
             _englischparkplatz++;
             if (_englischparkplatz >= 2) //Es darf pro Fach nur ein 5er geparkt werden
-                throw new Exception("Schule Fehlgeschlagen (return einfügen?)");
+                _fail = true;
         }
 
         public void DeutschparkplatzAdd()
         {
             _deutschparkplatz++;
             if (_deutschparkplatz >= 2) //Es darf pro Fach nur ein 5er geparkt werden
-                throw new Exception("Schule Fehlgeschlagen (return einfügen?)");
+                _fail = true;
         }
 
         public void MatheparkplatzAdd()
         {
             _matheparkplatz++;
             if (_matheparkplatz >= 2) //Es darf pro Fach nur ein 5er geparkt werden
-                throw new Exception("Schule Fehlgeschlagen (return einfügen?)");
+                _fail = true;
         }
 
         public void EnglischparkplatzRemove()
